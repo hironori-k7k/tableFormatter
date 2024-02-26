@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>table編集ツール</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1><span>表のHTMLフォーマットツール</span></h1>
+		<hr>
+		<span class="bold area">入力：&lt;table&gt;から&lt;/table&gt;までを含むHTMLを貼り付け</span>
+		<select name="type" id="type">
+			<option value="general">汎用表（見出し行あり）</option>
+			<option value="general_no_heading">汎用表（見出し行なし）</option>
+			<option value="middle">中段比較表</option>
+			<option value="bottom">最下部比較表</option>
+		</select>
+		<label style="margin-left: 10px;"><input type="checkbox" name="add_div" id="add_div" checked>比較表ではtableを囲むdivも出力する</label>
+		<br>
+		<textarea id="source" cols="130" rows="16" placeholder="tableのHTMLソースを、table要素の開きタグ&lt;table&gt;、閉じタグ&lt;/table&gt;を含めて貼り付ける。"></textarea>
+		<hr>
+		<div id="btns"><button id="runBtn" title="自動編集を実行">Run</button><button id="copyBtn" title="出力エリアのコードをクリップボードにコピー">Copy</button></div>
+		<hr>
+		<span class="bold area">出力</span><label><input type="checkbox" id="releaseReadonlyCheck">このテキストエリアを手動で編集可能にする（誤編集防止を解除）</label><br>
+		<textarea id="output" cols="130" rows="16" readonly></textarea>
+		<div id="demo"></div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
