@@ -1,0 +1,137 @@
+*::after, *::before {
+  font-family: "FontAwesome";
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #fff;
+}
+
+thead {
+  background: rgba(255, 165, 0, 0.7);
+  font-weight: normal;
+}
+
+th {
+  font-weight: bold !important;
+}
+
+th::after {
+  color: lime;
+}
+
+th[scope^=row]::after {
+  content: "\a\f178";
+}
+
+th[scope^=col]::after {
+  content: "\a\f175";
+}
+
+body {
+  background: #000;
+  color: #fff;
+  margin: 4px 8px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 span {
+  display: inline-block;
+  color: black;
+  background: white;
+  font-weight: bold;
+  padding: 3px 15px;
+  margin: 0 0 5px;
+}
+
+hr {
+  margin: 5px 0;
+}
+
+textarea {
+  margin: 2px 5px;
+  width: calc(100% - 10px);
+  max-width: 980px;
+}
+
+span.area {
+  margin-right: 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+span#scopeRadios.invalid {
+  opacity: 0.35;
+}
+
+#demo {
+  display: table;
+  padding: 10px;
+  border: 8px dotted white;
+}
+
+label, input {
+  cursor: pointer;
+}
+
+div label {
+  display: inline-block;
+}
+
+label + label {
+  margin-left: 15px;
+}
+
+textarea, input {
+  background: #111;
+  border: 1px solid skyblue;
+  color: #fff;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2;
+}
+
+.lime {
+  color: lime;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  height: 26px;
+  margin: 4px 16px;
+  width: 6em;
+}
+
+.copied #copyBtn {
+  background-color: palegreen;
+  font-weight: bold;
+  border: 2px black;
+}
+
+div#btns.copied ~ #output {
+  border-color: lime;
+}
+
+#output.outputting {
+  animation: opc 0.4s ease-out;
+}
+
+@keyframes opc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
